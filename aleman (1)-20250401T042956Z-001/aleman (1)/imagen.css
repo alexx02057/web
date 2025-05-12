@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 40px;
+}
+
+/* Contenedor principal con flex */
+.contenedor {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Imagen */
+.imagen img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+/* Texto */
+.texto {
+    max-width: 500px;
+}
+
+.texto h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}

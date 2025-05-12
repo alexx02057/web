@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="boton1.css">
+    <title>Perfumería</title>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="INICIO.HTML">INICIO</a></li>
+             <li><a href="productos.html">PRODUCTOS</a></li>
+              <li><a href="carrito.html">CARRITO</a></li>
+              
+            
+        </ul>
+    </nav>
+</header>
+
+ <div class="contenedor">
+  <div class="imagen">
+    <img src="ale36.JPG" alt="ellis by billie ">
+  </div>
+  <div class="texto">
+    
+ <h2>5ta avenue </h2>
+            <p>
+            Tamaño:125mL
+                <BR>Aroma:Notas de lila,flor de tilo,magnolia,vilota,ambar y almizcle
+                <BR>Estilo:Es un fragancia que evoca sofisticacion y feminidad
+                <BR>Duracion:Buena;permanece en la piel durante varias horas
+                <h3>Costo:$550</h3>
+    <button onclick="añadirAlCarrito('5ta avenue',550)">Añadir al carrito</button>
+    <button onclick="comprarAhora('5ta avenue')">Comprar</button>
+  </div>
+</div>
+
+  <script>
+    function añadirAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ nombre, precio });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+  </script>
+
+  <script>
+  function comprarAhora(nombre) { // 
+    window.location.href = "metodo2.html";
+  }
+</script>
+<footer>
+        <p>&copy; 2025 PERFUMERIA CATARSIS | TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
+
+</body>
+</html>

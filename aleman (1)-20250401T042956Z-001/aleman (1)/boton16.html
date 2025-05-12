@@ -1,0 +1,57 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="boton1.css">
+    <title>Perfumería</title>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="INICIO.HTML">INICIO</a></li>
+              <li><a href="productos.html">PRODUCTOS</a></li>
+             <li><a href="carrito.HTML">CARRITO</a></li>
+        </ul>
+    </nav>
+  </header>
+  <div class="contenedor">
+    <div class="imagen">
+      <img src="ale23.jpeg" alt="Guess 1981">
+    </div>
+    <div class="texto">
+  <h2>Agua kiss</h2>
+            <p>
+            Tamaño:250mL
+                <BR>Aroma:Notas de fresia,manzanila,sabila y margarita
+                <BR>Estilo:Evoca la frescura  del oceano convinada con la suavidad de flores delicadas.
+                <BR>Duracion:Moderado al ser bueno en bruma corporal y requiere reaplicacion
+                <h3>Costo:$260</h3>
+            </p>
+
+</p>
+      <button onclick="añadirAlCarrito('Agua kiss',260)">Añadir al carrito</button>
+      <button onclick="comprarAhora('Guess 1981')">Comprar</button>
+    </div>
+  </div>
+
+  <script>
+    function añadirAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ nombre, precio });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+          }
+  </script>
+  <script>
+  function comprarAhora(nombre) {
+     window.location.href = "metodo2.html";
+  }
+</script>
+<footer>
+        <p>&copy; 2025 PERFUMERIA CATARSIS | TODOS LOS DERECHOS RESERVADOR</p>
+    </footer>
+
+
+
+</body>
+</html>

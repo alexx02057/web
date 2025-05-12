@@ -1,0 +1,133 @@
+/* Estilo general */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Navbar fijo arriba */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color:#d46a9e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 10px 10px;
+  z-index: 1000;
+}
+
+/* Navegación centrada */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 500;
+  color:white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f7dbe6;
+}
+
+/* Contenedor principal del formulario */
+.payment-container {
+  max-width: 500px;
+  background: #fff;
+  margin: 120px auto 40px; /* margen superior aumentado para despegar del navbar */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos y formulario */
+.payment-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:#d46a9e;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 20px;
+  width: 100%;
+  background-color:#d46a9e;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color:#f7dbe6;
+  transform: scale(1.02);
+}
+
+/* Errores */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Loader */
+.loader {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loader span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #2ecc71;
+  border-radius: 50%;
+  margin: 0 2px;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-10px);
+  }
+}

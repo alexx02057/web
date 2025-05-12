@@ -1,0 +1,58 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="boton1.css">
+    <title>Perfumería</title>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="INICIO.HTML">INICIO</a></li>
+             <li><a href="productos.html">PRODUCTOS</a></li>
+             <li><a href="carrito.HTML">CARRITO</a></li>
+            
+                   </ul>
+    </nav>
+  </header>
+
+  <div class="contenedor">
+    <div class="imagen">
+      <img src="ale27.jpeg" alt="Guess 1981">
+    </div>
+    <div class="texto">
+   <h2>Perfect Marc Jacobs</h2>
+            <p>
+            Tamaño:50,100 y 150mL
+                <BR>Aroma:Sus notas son narciso,leche de almendra y cachemira
+                <BR>Estilo:Su estilo es crativo,femenino alegre y suave
+                <BR>Duracion:Una duracion entre 5 a 7 horas y es moderado.
+                <BR>Se adapta bien a personas jovenes quienes disfrutan perfumes suaves y femeninos sin ser empalagosos
+                <h3>Costo:$2,000</h3>
+            </p>
+</p>
+      <button onclick="añadirAlCarrito('Perfect Marc Jacobs',2000)">Añadir al carrito</button>
+      <button onclick="comprarAhora('Guess 1981')">Comprar</button>
+    </div>
+  </div>
+
+  <script>
+    function añadirAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ nombre, precio });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+  </script>
+  <script>
+  function comprarAhora(nombre) {
+             window.location.href = "metodo2.html";
+  }
+</script>
+<footer>
+        <p>&copy; 2025 PERFUMERIA CATARSIS | TODOS LOS DERECHOS RESERVADOR</p>
+    </footer>
+
+
+</body>
+</html>

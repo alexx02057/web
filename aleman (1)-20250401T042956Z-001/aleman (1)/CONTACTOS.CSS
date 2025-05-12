@@ -1,0 +1,106 @@
+body{
+  background-color:white;
+  }
+
+
+  body{
+    font-family:24;
+  }
+
+  button{
+  font-size:2.0em;
+  font-weight: bold;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border:1px;
+  color: white;
+  background-color:darkred;
+  align-items: center;
+  justify-content: center;
+ 
+  }
+  h2{font-size: 3.0em;}
+  h2{text-align: center;}
+  h3{text-align: center;}
+.conteiner{
+  max-width: 1300px;
+  margin:auto;
+
+}
+  header{
+    background-color:darkred;
+    font-size: 1.4em;
+    justify-contender:center;
+    display:grid;
+    gap:25px;
+    padding:20px;
+}
+
+header .logo{
+  margin: 0;
+  padding: 25px 35px;
+  color: steelblue;
+  font-size: 3.20em;
+  align-items:right;
+  font-family:cursive;
+}
+header .conteiner{
+  display: flex;
+  flex-direction: column; 
+  align-items:rigt;
+}
+header a {
+  padding:5px 12px;
+  text-decoration:none;
+  color:black ;
+}
+.container{
+max-width: 2000px;
+margin: 0;
+}
+.productos {
+padding: 0 0 80px 0;
+text-align: center;
+}
+
+.productos-content  {
+margin-top: 30px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+column-gap: 10px
+}
+
+.productos-1 {
+background color:#5F9F9F;
+padding: 20px;
+}
+
+.productos-1 h4{
+color: #A8A8A8;
+font-size: 30px;
+margin-bottom: 5px;
+}
+.procuctos-1 p {
+   color: blue;
+   margin-bottom: 10px;
+}
+ .navbar ul {
+display: flex;
+}
+  .navbar ul li a {
+font-size: 20px;
+padding: 0 20px;
+color: #1B1B1D;
+display: grid;
+font-weight: 600;
+}
+ .navber ul li a:hover{
+color: #FF8400;
+}
+img {
+  border-radius: 10px;
+  border-image:#000000 6px outset;
+  border:30px ;
+ margin: 40px 640px;
+
+  }

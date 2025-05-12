@@ -1,0 +1,57 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="boton1.css">
+    <title>Perfumería</title>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="INICIO.HTML">INICIO</a></li>
+             <li><a href="productos.html">PRODUCTOS</a></li>
+             <li><a href="carrito.HTML">CARRITO</a></li>
+            
+        </ul>
+    </nav>
+</header>
+  <div class="contenedor">
+    <div class="imagen">
+      <img src="ale20.JPG" alt="Guess 1981">
+    </div>
+    <div class="texto">
+     <h2>Chloe Chloe</h2>
+                <p>
+                Tamaño:67 oz 100 mL
+                <BR>Aroma: Floral con notas de cedro,magnolia y peonia.
+                <BR>Estilo:Sofisticado,elegante y ultra femenino.
+                <BR>Duracion:Exlente y dura mucho el olor.
+                <BR>Evoca la auntentica  feminidad y el espiritu libre de una mujer
+                <h3>Costo:$1,500</h3>
+                 </p>
+</p>
+      <button onclick="añadirAlCarrito('Chloe Chloe',1500)">Añadir al carrito</button>
+                 <button onclick="comprarAhora('Guess 1981')">Comprar</button>
+
+    </div>
+  </div>
+
+  <script>
+    function añadirAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ nombre, precio });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+         }
+  </script>
+ <script>
+  function comprarAhora(nombre) {
+     window.location.href = "motodo2.html";
+  }
+</script>
+<footer>
+        <p>&copy; 2025 PERFUMERIA CATARSIS | TODOS LOS DERECHOS RESERVADOR</p>
+    </footer>
+
+</body>
+</html>
