@@ -1,0 +1,151 @@
+
+:root {
+  --color-fondo: #fdf9f9;
+  --color-principal: #d46a9e;
+  --color-secundario: #f7dbe6;
+  --color-texto: #3a3a3a;
+  --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+  button{
+  font-size:2.0em;
+  font-weight: bold;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border:1px;
+  color: white;
+  background-color:steelblue;
+  text-align: center;
+ 
+  }
+  h2{font-size: 3.0em;}
+.conteiner{
+  max-width: 1300px;
+  margin:auto;
+
+}
+  header{
+  background-color: var(--color-principal);
+  padding: 15px 30px;
+  box-shadow: var(--sombra-suave);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-secundario);
+}
+
+header .logo{
+  margin: 0;
+  padding: 25px 35px;
+  color: steelblue;
+  font-size: 3.20em;
+  align-items:right;
+  font-family:'Raleway', sans-serif;
+}
+header .conteiner{
+  display: flex;
+  flex-direction: column; 
+  align-items:rigt;
+}
+header a {
+  padding:5px 12px;
+  text-decoration:none;
+  color:black ;
+background color:#5F9F9F;
+padding: 20px;
+
+}
+.contenedor {
+  max-width: 600px;
+  background: #fff;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+
+.contenedor:hover {
+  transform: scale(1.01);
+}
+
+.imagen img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.texto h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.texto p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.texto h3 {
+  color: #e91e63;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.texto button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 30px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.texto button:hover {
+  background-color: #c2185b;
+  transform: translateY(-2px);
+}
+ 
+footer {
+    background-color:#d46a9e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}

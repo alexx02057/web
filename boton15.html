@@ -1,0 +1,71 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="boton1.css">
+    <title>Perfumería</title>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+             <li><a href="productos.html">PRODUCTOS</a></li>
+             <li><a href="carrito.HTML">CARRITO</a></li>
+                    </ul>
+    </nav>
+  </header>
+
+  <div class="contenedor">
+    <div class="imagen">
+      <img src="ale22.jpeg" alt="Guess 1981">
+    </div>
+    <div class="texto">
+  <h2>Pear Glace</h2>
+            <p>
+            Tamaño:250mL
+                <BR>Aroma:Notas de salida:pera jugosa,cassis,melon casab y violeta.
+                <BR>Estilo:Evoca la frescura de un jardin frutal en verano.
+                <BR>Duracion:Moderado al ser bueno en bruma corporal y requiere reaplicacion
+                <h3>Costo:$250</h3>
+            </p>
+</p>
+      <button onclick="añadirAlCarrito('Pear Glace',250)">Añadir al carrito</button>
+      <button onclick="comprarAhora('Guess 1981')">Comprar</button>
+    </div>
+  </div>
+
+  <script>
+    function añadirAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ nombre, precio });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+                             // Mensaje bonito con SweetAlert2
+      Swal.fire({
+        icon: 'success',
+        title: '¡Añadido al carrito!',
+        text: `"${nombre}" ha sido agregado correctamente.`,
+        showConfirmButton: false,
+        timer: 1800
+      });
+    }
+
+    function comprarAhora(nombre) {
+      Swal.fire({
+        icon: 'info',
+        title: 'Redirigiendo...',
+        text: `Gracias por comprar "${nombre}"`,
+        showConfirmButton: false,
+        timer: 2000
+      }).then(() => {
+        window.location.href = "envio.html";
+      });
+    }
+  </script>
+<footer>
+        <p>&copy; 2025 PERFUMERIA CATARSIS | TODOS LOS DERECHOS RESERVADOR</p>
+    </footer>
+
+</body>
+</html>

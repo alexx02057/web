@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="envio.css" />
+  <title>Perfumería - Registro</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <!-- Navegador -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2>Datos de Envío</h2>
+
+  <div class="form-container">
+    <!-- ✅ Solo un formulario -->
+    <form action="metodo2.html" method="GET">
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección completa</label>
+        <textarea id="direccion" name="direccion" required></textarea>
+      </divs>
+
+      <!-- ✅ Botón dentro del mismo formulario -->
+      <button type="submit" class="btn-pagar">Pagar</button>
+    </form>
+  </div>
+
+</body>
+</html>

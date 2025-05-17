@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="boton1.css">
+    <title>Perfumería</title>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+             <li><a href="productos.html">PRODUCTOS</a></li>
+              <li><a href="carrito.html">CARRITO</a></li>
+              
+            
+        </ul>
+    </nav>
+</header>
+
+ <div class="contenedor">
+  <div class="imagen">
+    <img src="ale36.JPG" alt="ellis by billie ">
+  </div>
+  <div class="texto">
+    
+<h2>Pink Passion </h2>
+            <p>
+            Tamaño:125mL
+                <BR>Aroma:Notas de lila,flor de tiloy magnolia
+                <BR>Estilo:Es un fragancia que evoca  frecura y feminidad
+                <BR>Duracion:Buena;permanece en la piel durante varias horas
+                <h3>Costo:$700</h3>
+    <button onclick="añadirAlCarrito('Pink Passion ',700)">Añadir al carrito</button>
+    <button onclick="comprarAhora('Pink Passion ')">Comprar</button>
+  </div>
+</div>
+
+  <script>
+    function añadirAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ nombre, precio });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+                                // Mensaje bonito con SweetAlert2
+      Swal.fire({
+        icon: 'success',
+        title: '¡Añadido al carrito!',
+        text: `"${nombre}" ha sido agregado correctamente.`,
+        showConfirmButton: false,
+        timer: 1800
+      });
+    }
+
+    function comprarAhora(nombre) {
+      Swal.fire({
+        icon: 'info',
+        title: 'Redirigiendo...',
+        text: `Gracias por comprar "${nombre}"`,
+        showConfirmButton: false,
+        timer: 2000
+      }).then(() => {
+        window.location.href = "envio.html";
+      });
+    }
+  </script>
+<footer>
+        <p>&copy; 2025 PERFUMERIA CATARSIS | TODOS LOS DERECHOS RESERVADOs</p>
+    </footer>
+
+</body>
+</html>

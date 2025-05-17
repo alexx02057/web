@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="metod.css" />
+  <title>Forma de pago</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="productos.html">PRODUCTOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="payment-container">
+    <h2>Pagar con Tarjeta</h2>
+    <form id="paymentForm">
+      <label for="tipo">Tipo de tarjeta</label>
+      <select id="tipo" required>
+        <option value="">Selecciona una opción</option>
+        <option value="visa">Visa</option>
+        <option value="mastercard">MasterCard</option>
+        <option value="amex">American Express</option>
+      </select>
+      <div class="error-message" id="errorTipo"></div>
+
+      <label for="nombre">Nombre del titular</label>
+      <input type="text" id="nombre" placeholder="Nombre completo" required />
+      <div class="error-message" id="errorNombre"></div>
+
+      <label for="numero">Número de tarjeta</label>
+      <input type="text" id="numero" maxlength="16" placeholder="•••• •••• •••• ••••" required />
+      <div class="error-message" id="errorNumero"></div>
+
+      <label for="fecha">Fecha de vencimiento</label>
+      <input type="month" id="fecha" required />
+      <div class="error-message" id="errorFecha"></div>
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" maxlength="4" placeholder="3 o 4 dígitos" required />
+      <div class="error-message" id="errorCvv"></div>
+
+      <button type="submit">Pagar ahora</button>
+    </form>
+    <script>
+  const form = document.getElementById('paymentForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const tipo = document.getElementById('tipo').value;
+    const nombre = document.getElementById('nombre').value;
+    const numero = document.getElementById('numero').value;
+
+    // Puedes hacer validaciones extra aquí si deseas
+
+    // Simulamos carga (opcional)
+    document.getElementById('loader').style.display = 'block';
+
+    // Redirigir con un pequeño retraso para mostrar el loader
+    setTimeout(() => {
+      const params = new URLSearchParams({
+        tipo,
+        nombre,
+        numero
+      });
+
+      window.location.href = `confirmacion.html?${params.toString()}`;
+    }, 2000);
+  });
+</script>
+
+
+    <div class="loader" id="loader">
+      <p>Procesando...</p>
+      <span></span><span></span><span></span>
+    </div>
+  </main>
+</body>
+</html>
